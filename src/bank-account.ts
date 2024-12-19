@@ -1,15 +1,15 @@
-class BankAccount {
-    balance: number
+export class BankAccount {
+    balance: number;
 
-    constructor(initialAmount: string) {
-        balance = initialAmount
+    constructor(balance: number) {
+        this.balance = balance;
     }
 
-    deposit(amount: number): number {
-        this.balance
-        return 0
+    deposit(amount: number): void {
+        this.balance = this.balance + amount;
     }
 }
 
-const myAccount = new BankAccount(500)
-console.log(myAccount.deposit(100)) // After fixing: will print 600
+const bankAccount = new BankAccount(500);
+bankAccount.deposit(100);// After fixing: will print 600
+console.log(bankAccount.balance);

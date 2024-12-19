@@ -1,17 +1,18 @@
-class Car {
-    brand: string
-    speed: number
+export class Car {
+    brand: string;
+    speed: number;
 
-    constructor(brand: string, speed: string) {
-        this.brand = Brand
-        this.speed = Speed
+    constructor(brand: string, speed: number) {
+        this.brand = brand;
+        this.speed = speed;
     }
 
-    accelerate(): void {
-        this.speed = 20
-        return speed
+    accelerate(amount: number): void {
+        this.speed = this.speed + amount;
     }
 }
 
-const car = new Car('Toyota', 100)
-console.log(car.accelerate()) // After fixing: will print 120
+const car = new Car('Toyota', 100);
+car.accelerate(20); // After fixing: will print 120
+console.log(car.speed);
+
